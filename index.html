@@ -8,16 +8,13 @@
     <meta name="description" content="Sua loja de aplicativos favorita">
     <meta name="theme-color" content="#E9F5FF">
 
-    <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
 
-    <!-- iOS PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Store Apps">
     <link rel="apple-touch-icon" href="icon-192.png">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icon-16.png">
 
@@ -197,7 +194,6 @@
 </head>
 
 <body>
-    <!-- Header -->
     <header class="nav-glass shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -220,7 +216,6 @@
                         <i class="fas fa-search absolute left-3 top-3" style="color: var(--text-muted);"></i>
                     </div>
 
-                    <!-- Desktop Install Button -->
                     <button id="headerInstallBtn"
                         class="hidden md:flex items-center px-4 py-2 rounded-full transition-all group hover:bg-white/40"
                         style="color: var(--primary-brand);" title="Instalar App">
@@ -228,7 +223,6 @@
                         <span class="ml-2 text-sm font-bold">Instalar</span>
                     </button>
 
-                    <!-- Survey Button -->
                     <button onclick="openSurvey()" class="p-2 rounded-full hover:bg-white/40 transition-all"
                         title="Avaliar Sistema">
                         <i class="fas fa-star text-xl text-yellow-500"></i>
@@ -244,7 +238,6 @@
                     </button>
                 </div>
             </div>
-            <!-- Mobile Search & Menu -->
             <div id="mobileSearch" class="hidden md:hidden pb-4 space-y-4">
                 <div class="relative">
                     <input type="text" id="mobileSearchInput" placeholder="Pesquisar apps..."
@@ -252,7 +245,6 @@
                         style="background-color: rgba(255, 255, 255, 0.5); color: var(--text-heading); border: 1px solid var(--border-subtle);">
                     <i class="fas fa-search absolute left-3 top-3" style="color: var(--text-muted);"></i>
                 </div>
-                <!-- Mobile Actions -->
                 <div class="grid grid-cols-2 gap-4 pt-2 border-t" style="border-color: rgba(147, 191, 239, 0.3);">
                     <button id="mobileInstallBtn"
                         class="hidden flex-col items-center justify-center p-3 rounded-xl hover:bg-white/30"
@@ -271,46 +263,36 @@
         </div>
     </header>
 
-    <!-- Categories -->
     <div class="glass-effect border-b" style="border-color: rgba(147, 191, 239, 0.1);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex space-x-2 overflow-x-auto scroll-container pb-2" id="categoriesContainer">
-                <!-- Categories will be inserted here by JavaScript -->
-            </div>
+                </div>
         </div>
     </div>
 
-    <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- Featured Apps -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold mb-6 text-gradient">Apps em Destaque</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="featuredApps">
-                <!-- Featured apps will be inserted here by JavaScript -->
-            </div>
+                </div>
         </section>
 
-        <!-- All Apps -->
         <section>
             <h2 class="text-2xl font-bold mb-6 text-gradient">Todos os Apps</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="allApps">
-                <!-- All apps will be inserted here by JavaScript -->
-            </div>
+                </div>
         </section>
     </main>
 
-    <!-- App Detail Modal -->
     <div id="appModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden">
         <div class="flex items-center justify-center min-h-screen p-4">
             <div class="glass-effect rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                 <div id="modalContent">
-                    <!-- Modal content will be inserted here by JavaScript -->
-                </div>
+                    </div>
             </div>
         </div>
     </div>
 
-    <!-- Install Prompt Bottom Sheet -->
     <div id="installPrompt" class="install-prompt hidden">
         <div class="glass-effect rounded-xl p-5 max-w-sm border border-white/50">
             <div class="flex items-center mb-4">
@@ -338,7 +320,6 @@
         </div>
     </div>
 
-    <!-- Survey Modal -->
     <div id="surveyModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden">
         <div class="flex items-center justify-center min-h-screen p-4">
             <div
@@ -581,6 +562,24 @@
                 featured: false,
                 link: "https://drive.google.com/file/d/1kxs_k9tQXgKVHN60fyteJRFEHB2zxOUU/view?usp=drive_link",
                 qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drive.google.com/file/d/1kxs_k9tQXgKVHN60fyteJRFEHB2zxOUU/view?usp=drive_link"
+            },
+            {
+                id: 13,
+                name: "Eu Amo Café Pro Max",
+                category: "educação",
+                icon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>",
+                images: [],
+                description: "App essencial para amantes de café e produtividade.",
+                longDescription: "A ferramenta definitiva para quem não vive sem café. Organize pausas, cronometre o preparo e maximize sua produtividade com a energia do café.",
+                developer: "Prof Digital",
+                size: "Web",
+                version: "1.0",
+                rating: 4.9,
+                downloads: "100+",
+                price: "Grátis",
+                featured: true,
+                link: "https://eu-amo-cafe-pro-max.surge.sh/",
+                qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://eu-amo-cafe-pro-max.surge.sh/"
             }
         ];
 
@@ -798,7 +797,7 @@
                     <button onclick="closeModal()" class="absolute -top-2 -right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors" style="color: var(--text-heading);">
                         <i class="fas fa-times"></i>
                     </button>
-                    
+                     
                     <div class="bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/60">
                         <div class="flex items-center mb-8">
                             <img src="${app.icon}" alt="${app.name}" class="w-24 h-24 rounded-2xl mr-6 shadow-lg">
@@ -813,7 +812,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+                         
                         <div class="mb-8">
                             <h3 class="font-bold mb-3 text-lg" style="color: var(--text-heading);">Sobre o app</h3>
                             <p class="leading-relaxed text-gray-700" style="color: var(--text-main);">${app.longDescription}</p>
@@ -827,7 +826,7 @@
                             </div>
                         </div>
                         ` : ''}
-                        
+                         
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                             <div class="p-4 rounded-xl text-center transition-transform hover:scale-105" style="background: var(--alice-blue);">
                                 <span class="text-xs font-bold uppercase tracking-wider block mb-1" style="color: var(--text-muted);">Tamanho</span>
@@ -846,7 +845,7 @@
                                 <p class="font-bold" style="color: var(--text-heading);">${app.price}</p>
                             </div>
                         </div>
-                        
+                         
                         ${app.images && app.images.length > 0 ? `
                         <div class="mb-8">
                             <h3 class="font-bold mb-4 text-lg" style="color: var(--text-heading);">Galeria</h3>
@@ -857,7 +856,7 @@
                             </div>
                         </div>
                         ` : ''}
-                        
+                         
                         <div class="flex space-x-4 pt-4 border-t" style="border-color: var(--border-subtle);">
                             <a href="${app.link}" target="_blank" 
                                class="flex-1 py-4 px-6 rounded-xl font-bold text-center glow-effect transition-all shadow-lg transform hover:-translate-y-1 hover:shadow-xl" 
